@@ -8,7 +8,9 @@
     "build:dev": "webpack",
     "build:prod": "webpack -p --env production",
     "dev-server": "webpack-dev-server",
-    "test": "jest --config=jest.config.json"
+    "test": "jest --config=jest.config.json",
+    "start": "node server/server.js",
+    "heroku-postbuild": "npm run build:prod"
   },
   "author": "Deep Singh",
   "license": "ISC",
@@ -46,5 +48,8 @@
     "validator": "^9.3.0",
     "webpack": "^3.10.0",
     "webpack-dev-server": "^2.11.1"
+  },
+  "dependencies": {
+    "express": "^4.16.2"
   }
 }
